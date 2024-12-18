@@ -25,3 +25,339 @@ body {
     text-wrap: balance;
   }
 }
+
+#wrap-overlay {
+  position: relative;
+}
+
+#gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 182px;
+  background: linear-gradient(to bottom, #020202, rgba(0, 0, 0, 0));
+}
+
+.black-gold-bg {
+  background: rgb(255, 219, 150);
+  background: linear-gradient(
+    38deg,
+    rgba(255, 219, 150, 1) 0%,
+    rgba(79, 64, 37, 1) 12%,
+    rgba(47, 38, 22, 1) 30%,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 1) 60%,
+    rgba(47, 38, 22, 1) 76%,
+    rgba(79, 64, 37, 1) 87%,
+    rgba(255, 219, 150, 1) 100%
+  );
+}
+
+#black-waves-bg {
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='367' height='44' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='4' stroke-opacity='0.42'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+#clipped-div-fade-more {
+  margin: 0px -15px 0px 0px;
+  height: 100%;
+  width: 34px;
+  background-color: #ffcf0060;
+  clip-path: polygon(78% 0, 100% 0%, 22% 100%, 0% 100%);
+}
+
+#clipped-div-fade {
+  margin: 0px -15px 0px 0px;
+  height: 100%;
+  width: 38px;
+  background-color: #ffcf00;
+  clip-path: polygon(66% 0, 100% 0%, 34% 100%, 0% 100%);
+}
+
+#clipped-div {
+  padding: 8px 32px;
+  background-color: #ffcf00;
+  color: #141414;
+  clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+}
+
+#price-tag-svg {
+  width: 11.2rem;
+  height: 11.2rem;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" fill="%23FFFFFF"><path d="M371.3 294.4 480 240l-108.7-54.4 38.4-115.3-115.3 38.4L240 0l-54.4 108.7L70.3 70.3l38.4 115.3L0 240l108.7 54.4-38.4 115.3 115.3-38.4L240 480l54.4-108.7 115.3 38.4-38.4-115.3z"></path></svg>');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #000000; /* Text color */
+  display: flex; /* Flexbox to center the text */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  font-size: 31px; /* Adjust font size */
+  text-align: center; /* Center text inside */
+  font-weight: 600;
+  /*animation: swirl 60s linear infinite;*/
+}
+
+@keyframes swirl {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#normal-price-tag-svg {
+  width: 11rem;
+  height: 11rem;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" fill="%23FFFFFF"><path d="M197.6 42.4 42.4 197.6a60 60 0 0 0 0 84.8l155.2 155.2a60 60 0 0 0 84.8 0l155.2-155.2a60 60 0 0 0 0-84.8L282.4 42.4a60 60 0 0 0-84.8 0Z"></path></svg>');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #000000; /* Text color */
+  display: flex; /* Flexbox to center the text */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  font-size: 25px; /* Adjust font size */
+  text-align: center; /* Center text inside */
+  font-weight: 600;
+}
+
+#timer-clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black; /* Background color for the clock */
+  border: 2px solid #a7a7a760;
+  border-radius: 10px;
+}
+
+#horizontal-line {
+  height: 2px;
+  background-color: gray; /* Color of the line */
+  margin: 10px 20px 0px 20px; /* 20px padding from left and right */
+  width: calc(
+    100% - 80px
+  ); /* Adjust the width to account for 20px padding on both sides */
+}
+
+#metallic-number {
+  line-height: 1em;
+  font-size: 48px;
+  font-weight: bold;
+  background: linear-gradient(
+    180deg,
+    #b8b8b8,
+    #ffde59,
+    #d4af37,
+    #c0c0c0,
+    #8a8a8a
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; /* Make text color transparent to reveal gradient */
+  text-shadow: 1px 1px 1px #00000080,
+    /* Bottom right shadow (dark) */ -1px -1px -1px #ffffff80,
+    /* Top left highlight (light) */ 1px 1px 1px rgba(0, 0, 0, 0.8),
+    /* Deeper bottom right shadow */ -1px -1px 1px rgba(255, 255, 255, 0.5); /* Deeper top left highlight */
+}
+
+@font-face {
+  font-family: "SevenSegment";
+  src: url("https://your-cdn-url/sevensegment.ttf") format("truetype");
+}
+
+#timer-clock-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "SevenSegment", monospace; /* Custom font or monospace */
+  font-size: 2.1rem; /* Size of the display */
+  color: red; /* Red color for the numbers */
+  background-color: black; /* Black background */
+  height: 60px;
+  padding: 0px 14px 0px 14px;
+  border: 2px solid #cba544;
+  border-radius: 10px;
+  letter-spacing: 0.1rem;
+}
+
+#riscado {
+  position: relative;
+  display: inline-block;
+}
+
+#riscado::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%; /* Posiciona o risco no meio do texto */
+  height: 2px; /* Controla a espessura do risco */
+  background-color: red; /* Cor do risco */
+}
+
+#spinner {
+  width: 50px; /* Tamanho da rodinha */
+  height: 50px;
+  border: 6px solid rgba(0, 0, 0, 0.1); /* Fundo da borda */
+  border-left-color: black; /* Cor visível da rodinha */
+  border-radius: 50%; /* Forma circular */
+  animation: spin 1s linear infinite; /* Animação contínua */
+}
+
+#quote-box {
+  width: 300px;
+  padding: 20px 20px 36px 20px;
+  background-color: #f5f5f5; /* Light gray background */
+  border: 4px solid #e39b6c; /* Yellow border */
+  border-radius: 15px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+#quote-box img {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #f5f5f5;
+  //border: 4px solid #e39b6c;
+  background-color: #f5f5f5;
+  position: absolute;
+  top: -40px; /* Positioning image halfway outside */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#quote-text {
+  margin-top: 40px;
+  font-size: 16px;
+  color: #333;
+  font-style: italic;
+}
+
+/* Modal estilizado */
+.custom-modal {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark transparent overlay */
+}
+
+.custom-modal-box {
+  position: relative;
+  max-width: 88%;
+  width: 88%;
+  background-color: #222; /* Light background color */
+  padding: 0px;
+  border: none;
+  border-radius: 0px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.custom-close-x {
+  z-index: 999;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+.custom-close-btn {
+  color: white;
+  border-radius: 5px;
+  padding: 4px 10px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes lightMove {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes swipe {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.animate-swipe {
+  font-size: 2rem; /* Adjust size of the hand */
+  animation: swipe 2s ease-in-out infinite; /* Infinite swipe animation */
+  /* transform: translateX(0); */
+}
+
+/* Animação de entrada */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+/* Animação de saída */
+.fade-out {
+  animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+/* Keyframes para animação */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+.easypay-sdk-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9990;
+}
+
+#easypay-checkout {
+  position: fixed;
+  margin-top: 20px;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 9999;
+  height: fit-content;
+}

@@ -1,5 +1,7 @@
+import Script from 'next/script';
 import localFont from "next/font/local";
 import "./globals.css";
+import { GlobalProvider } from './context/GlobalContext';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -19,11 +21,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="pt-BR">
+      <head>
+        <Script
+          src="https://cdn.easypay.pt/checkout/2.6.2/"
+          strategy="afterInteractive"  // Carregar após a interação inicial
+        />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <GlobalProvider>{children}</GlobalProvider>
       </body>
     </html>
   );
