@@ -48,11 +48,4 @@ export const GlobalProvider = ({ children }) => {
   );
 };
 
-/*
-API_URL=https://api.easypay.pt
-TEST_ACCOUNT_ID="8ce71651-36e6-4361-9c46-c44ae4603f3c"
-TEST_API_KEY="b0205239-13fe-4d8f-ab4f-a119800726e2"
-IFRAME_URL=https://checkout.easypay.pt/iframe
-*/
-
 export const useGlobalContext = () => useContext(GlobalContext);
