@@ -7,8 +7,8 @@ export async function POST(req) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'AccountId': '8ce71651-36e6-4361-9c46-c44ae4603f3c',
-        'ApiKey': 'b0205239-13fe-4d8f-ab4f-a119800726e2',
+        'AccountId': '',
+        'ApiKey': '',
       },
       body: JSON.stringify(productBody),
     });
